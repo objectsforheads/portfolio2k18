@@ -1,0 +1,9 @@
+$colors: (
+  black: #333
+);
+
+@function color($color) {
+  @if map-has-key($colors, $color) {
+    @return map-get($colors, $color);
+  }
+}
