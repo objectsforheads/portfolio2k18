@@ -48,19 +48,33 @@ export default {
 
   &:hover {
     .btn {
-      transform: translateY(8px);
-      border-width: 4px;
+      transform: translateY(0.45em);
+      border-width: 0.15em 0.2em 0.15em 0.2em;
     }
   }
 }
 
+$btn__bg: color(green);
+$btn__text: color(white);
+
 .btn {
-  padding: 0 0.5em 0.175em 0.5em;
-  border: 4px solid color(white);
-  border-width: 4px 4px 10px 4px;
+  padding: 0.25em 0.5em 0.175em 0.5em;
+  border-style: solid;
+  border-width: 0.15em
+                0.2em
+                0.6em
+                0.2em;
+  border-color: darken($color: $btn__bg, $amount: 5)
+                darken($color: $btn__bg, $amount: 12)
+                darken($color: $btn__bg, $amount: 20)
+                darken($color: $btn__bg, $amount: 10);
   display: inline-block;
-  @include pixel(2);
-  color: color(white);
+  // @include pixel(2);
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: 900;
+  color: $btn__text;
   text-decoration: none;
+  background: $btn__bg;
 }
 </style>
