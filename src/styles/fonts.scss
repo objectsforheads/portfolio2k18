@@ -108,4 +108,6 @@
 @mixin pixel($ratio: 1) {
   font-family: 'uni_05_53';
   font-size: 16px * $ratio;
+  -webkit-font-smoothing: none;
+  -moz-osx-font-smoothing: grayscale;
 }

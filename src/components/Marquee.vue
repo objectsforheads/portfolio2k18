@@ -1,5 +1,5 @@
 <template>
-  <div data-component="marquee" class="slide">
+  <div data-component="marquee">
     <h1 class="title">
       <div class="top">
         <div data-text="objects">
@@ -43,13 +43,19 @@ export default {
 
 [data-component="marquee"] {
   background: color(black);
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   flex-direction: column;
 
   > .title {
     filter: drop-shadow(0.125em 0.125em 0 black);
     margin: 0;
     text-transform: uppercase;
-    font-size: 5rem;
+    font-size: 2.5rem;
     font-weight: 700;
     text-align: center;
     transform: translate(-1em, 0);
@@ -69,7 +75,7 @@ export default {
     display: flex;
     align-items: center;
     justify-content: center;
-    transform: translate(2em, -0.2em);
+    transform: translate(2em, -0.4em);
   }
 
   .small-caps {
@@ -77,7 +83,7 @@ export default {
     font-weight: 900;
     align-self: flex-start;
     border-bottom: 0.2em solid color(white);
-    margin-top: 0.125em;
+    margin-top: 0.25em;
   }
 }
 </style>

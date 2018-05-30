@@ -58,7 +58,7 @@ $btn__bg: color(green);
 $btn__text: color(white);
 
 .btn {
-  padding: 0.25em 0.5em 0.175em 0.5em;
+  padding: 0.125em 0.5em 0.175em 0.5em;
   border-style: solid;
   border-width: 0.15em
                 0.2em
@@ -69,10 +69,10 @@ $btn__text: color(white);
                 darken($color: $btn__bg, $amount: 20)
                 darken($color: $btn__bg, $amount: 10);
   display: inline-block;
-  // @include pixel(2);
-  font-size: 2em;
-  text-transform: uppercase;
-  font-weight: 900;
+  @include pixel(2);
+  // font-size: 2em;
+  // text-transform: uppercase;
+  // font-weight: 900;
   color: $btn__text;
   text-decoration: none;
   background: $btn__bg;
