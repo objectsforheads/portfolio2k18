@@ -96,3 +96,16 @@
   font-weight: 100;
   font-style: italic;
 }
+
+@font-face {
+    font-family: 'uni_05_53';
+    src: url('~@/assets/fonts/uni0553-webfont-webfont.woff2') format('woff2'),
+         url('~@/assets/fonts/uni0553-webfont-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@mixin pixel($ratio: 1) {
+  font-family: 'uni_05_53';
+  font-size: 16px * $ratio;
+}

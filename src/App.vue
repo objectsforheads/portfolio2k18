@@ -14,6 +14,11 @@ export default {
 @import '~@/styles/fonts.scss';
 @import '@/styles/variables/colors.scss';
 
+*, *::before, *::after {
+  position: relative;
+  box-sizing: border-box;
+}
+
 body, html {
   margin: 0;
   padding: 0;
@@ -26,5 +31,27 @@ body, html {
   text-align: center;
   // color: #2c3e50;
   color: color(black);
+}
+
+.slide {
+  min-height: 100vh;
+  max-width: 100vw;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.markdown {
+  a {
+    @include pixel(2);
+    color: red;
+
+    &:hover {
+      background: red;
+      text-decoration: none;
+      color: white;
+    }
+  }
 }
 </style>
